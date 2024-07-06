@@ -64,7 +64,7 @@ class EightPuzzleNode:
 
     def heuristic(self):
         # Manhattan distance heuristic
-        goal_positions = [(i // 3, i % 3) for i in range(1, 9)]
+        goal_positions = [(i // 3, i % 3) for i in range(0, 8)]
         current_positions = [(self.state.state.index(i) // 3, self.state.state.index(i) % 3) for i in range(1, 9)]
         return sum(
             abs(current_positions[i][0] - goal_positions[i][0]) + abs(current_positions[i][1] - goal_positions[i][1])
